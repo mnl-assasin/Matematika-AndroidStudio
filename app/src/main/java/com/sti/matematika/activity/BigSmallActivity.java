@@ -133,6 +133,14 @@ public class BigSmallActivity extends AppCompatActivity {
         } else {
             tvResult.setText("Wrong");
         }
-        initQuestion();
+
+        if ((difficulty == 0 && question >= 10) || (difficulty == 1 && question >= 15) || (difficulty == 2 && question >= 20))
+            enterName();
+        else
+            initQuestion();
+    }
+
+    private void enterName() {
+
     }
 }

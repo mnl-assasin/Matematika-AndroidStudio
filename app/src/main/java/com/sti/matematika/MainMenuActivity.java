@@ -26,6 +26,8 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         ButterKnife.bind(this);
+
+        test();
     }
 
     @OnClick({R.id.btnStart, R.id.btnScore, R.id.btnAbout, R.id.btnExit})
@@ -34,13 +36,26 @@ public class MainMenuActivity extends AppCompatActivity {
             case R.id.btnStart:
                 startActivity(new Intent(getApplicationContext(), StartActivity.class));
                 break;
-            case R.id.btnScore: startActivity(new Intent(getApplicationContext(), ScoreActivity.class));
+            case R.id.btnScore:
+                startActivity(new Intent(getApplicationContext(), ScoreActivity.class));
                 break;
-            case R.id.btnAbout: startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            case R.id.btnAbout:
+                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
                 break;
             case R.id.btnExit:
                 // exit;
                 break;
         }
+    }
+
+    private void test() {
+//
+//        final EditText etName = new EditText(this);
+//        AlertDialog.Builder builder = new AlertDialog.Builder(MainMenuActivity.this);
+//        builder.setView(etName);
+//        builder.show();;
+//    }
+
+
     }
 }
